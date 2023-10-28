@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kategorie: {{ category }}</title>
+</head>
+<body>
+    <h1>Kategorie: {{ category }}</h1>
+    <h2>Notizen</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.text }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

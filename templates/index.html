@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online-Notizen</title>
+</head>
+<body>
+    <h1>Online-Notizen</h1>
+    <h2>Notizen</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.text }} (Kategorie: {{ note.category }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Neue Notiz erstellen</h2>
+    <form method="POST" action="/add_note">
+        <label for="note_text">Notiztext:</label>
+        <textarea name="note_text" id="note_text" required></textarea><br>
+        <label for="category">Kategorie:</label>
+        <select name="category" id="category" required>
+            <option value="Arbeit">Arbeit</option>
+            <option value="Schule">Schule</option>
+            <option value="Privat">Privat</option>
+        </select><br>
+        <input type="submit" value="Notiz erstellen">
+    </form>
+</body>
+</html>
