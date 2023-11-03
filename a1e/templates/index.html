@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ title }}</title>
+    <title>Problemlösungen in verschiedenen Paradigmen</title>
 </head>
 <body>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
+    <h1>Problemlösungen in verschiedenen Paradigmen</h1>
+    <table>
+        <tr>
+            <th>Problem</th>
+            <th>OO-Stil</th>
+            <th>Prozeduraler Stil</th>
+            <th>Funktionaler Stil</th>
+        </tr>
+        {% for problem, solutions in problems.items() %}
+            <tr>
+                <td>{{ problem }}</td>
+                <td>{{ solutions["OO"] }}</td>
+                <td>{{ solutions["prozedural"] }}</td>
+                <td>{{ solutions["funktional"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
