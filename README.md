@@ -1,4 +1,4 @@
-# m323_lb02_zeindler_ilenia
+# M323_LB02_ZEINDLER_ILENIA
 ### A1
 - A1G abgebgen
 - A1F abgebgen
